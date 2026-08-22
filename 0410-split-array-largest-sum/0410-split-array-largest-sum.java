@@ -14,7 +14,7 @@ class Solution {
         int sum = 0;
         int mid = start + (end-start) / 2; // take the avg. of the smallest possible max sum and the largest possible max sum and check against it
 
-        for (int i = 0; i<nums.length; i++) { // breaking into subarrays based on a max sum constraint taken as avg. of the smallest and largest possible max sum and each time reaching the possible max sum by finding mid using binary search on either right or left side of the calculated mid.
+        for (int i = 0; i<nums.length; i++) { // breaking into subarrays based on a max sum constraint taken as avg. of the smallest and largest possible max sum and each time reaching the possible minimized max sum by finding mid using binary search on either right or left side of the calculated mid.
             if(sum+nums[i] > mid){
                 // create new subarray
                 sum = nums[i];
